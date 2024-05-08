@@ -9,7 +9,7 @@ mean_points = reviews.groupby('country')['points'].mean().apply(lambda point: ro
 countries_reviewed = reviews.value_counts('country')
 #discover counts of how many times a country was reviewed
 
-new_df = [countries_reviewed, mean_points, ]
+new_df = [countries_reviewed, mean_points]
 #combine dfs into one new dataframe variable 
 
 results = pd.concat(new_df, axis = 1)
